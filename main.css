@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+h3{
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+    bottom: 38px;
+    left: 316px;
+    
+    
+}
+
+.chicken h3{
+    background-color: pink;
+    padding: 1px ;
+    font-size: 18px;
+}
+
+.mutton h3{
+    background-color:rgba(235, 91, 91, 0.945);
+    padding: 1px;
+    font-size: 18px;
+}
+
+.buff h3{
+    background-color: rgb(243, 243, 124);
+    padding: 1px;
+    font-size: 18px;
+}
+
+.main{
+    display: grid;
+    grid-template-areas: 
+    'chicken mutton buff';
+    grid-gap: 1.875rem;
+    
+}
+
+.chicken{
+    grid-area: chicken;
+    border: 1px solid black;
+    background-color: gray;
+    line-height: 20px;
+    padding: 20px;
+    text-align: center;
+   
+}
+
+.mutton{
+    grid-area: mutton;
+    border: 1px solid black;
+    background-color: gray;
+    line-height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.buff{
+    grid-area: buff;
+    border: 1px solid black;
+    background-color: gray;
+    line-height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Media Querry*/
+
+@media only screen and  (max-width: 991px) {
+
+    .main{
+        display: grid;
+        grid-template-areas: 
+        'chicken mutton'
+        'buff buff';
+        grid-gap: 1.875rem;
+    }
+        h3{
+            position: relative;
+            bottom: 38px;
+            left: 259px;
+        }
+
+        .buff h3{
+            position: relative;
+            bottom: 38px;
+            left: 547px;
+        }
+    
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .main{
+        display: grid;
+        grid-template-areas: 
+        'chicken'
+        'mutton'
+        'buff';
+        grid-gap: 1.875rem;
+    }
+    h3{
+        position: relative;
+        bottom: 38px;
+        left: 330px;
+    }
+    
+    .buff h3{
+        position: relative;
+        bottom: 38px;
+        left: 330px;
+    }
+}
